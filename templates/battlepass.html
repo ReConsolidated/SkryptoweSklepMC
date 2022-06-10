@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/battlepass.css') }}">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{ url_for('static',filename='js/stripe_battlepass.js') }}"></script>
+
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <div class="topnav-centered">
+        <a href="{{ url_for('index') }}">Rangi</a>
+        <a href="" class="active">Karnety</a>
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="main_field">
+        <h1 style="font-size: 48px"><b>Karnet Premium</b></h1>
+        <br>
+        <input id="nick_input" type="text" placeholder="Twój nick z gry">
+        <a href="" id="buy_battlepass" class="button"><i class="fa fa-shopping-cart"></i><b> Kup teraz!</b></a>
+        <br>
+        <br>
+        <br>
+        <div class="w3-content w3-display-container slideshow">
+            <img class="mySlides" src="{{ url_for('static',filename='images/slide1.jpg') }}">
+            <img class="mySlides" src="{{ url_for('static',filename='images/slide2.jpg') }}">
+            <img class="mySlides" src="{{ url_for('static',filename='images/slide3.jpg') }}">
+            <div class="w3-center" style="width:100%">
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<script src="{{ url_for('static',filename='js/slideshow.js') }}"></script>
+<script src="{{ url_for('static',filename='js/shake.js') }}"></script>
+
+</body>
+</html>

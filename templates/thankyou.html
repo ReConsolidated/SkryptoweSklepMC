@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{ url_for('static',filename='js/stripe.js') }}"></script>
+</head>
+<body style="margin: 0">
+<div class="topnav" id="myTopnav">
+    <div class="topnav-centered">
+        <a href="{{ url_for('index') }}">Rangi</a>
+        <a href="{{ url_for('battlepass') }}" >Karnety</a>
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="main_field">
+        <br>
+        <h1 style="font-size: 48px"><b>Dziekujemy za zakup!</b></h1>
+        <h1 style="font-size: 36px">Poczekaj do 5 minut, aby otrzymac swoje przedmioty</h1>
+        <br>
+        <br>
+    </div>
+</div>
+</body>
+</html>

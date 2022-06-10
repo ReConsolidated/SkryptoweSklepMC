@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="{{ url_for('static',filename='js/stripe.js') }}"></script>
+</head>
+<body style="margin: 0">
+<div class="topnav" id="myTopnav">
+    <div class="topnav-centered">
+        <a href="" class="active">Rangi</a>
+        <a href="{{ url_for('battlepass') }}" >Karnety</a>
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="main_field">
+        <h1 style="font-size: 48px"><b>Rangi</b></h1>
+        <br>
+        <input id="nick_input" type="text" placeholder="Twój nick z gry">
+        <br>
+        <br>
+        <table class="container">
+            <tr>
+                <th style=""></th>
+                <th style="min-width: 20%">
+                    VIP<br><br>
+                    <a href="" id="buy_vip" class="button"><nobr><i class="fa fa-shopping-cart"></i> KUP</nobr></a>
+                </th>
+                <th style="min-width: 20%">
+                    SVIP<br><br>
+                    <a href="" id="buy_svip" class="button"><nobr><i class="fa fa-shopping-cart"></i> KUP</nobr></a>
+                </th>
+                <th style="min-width: 20%">
+                    MVIP<br><br>
+                    <a href="" id="buy_mvip" class="button"><nobr><i class="fa fa-shopping-cart"></i> KUP</nobr></a>
+                </th>
+                <th style="min-width: 20%">
+                    SPONSOR<br><br>
+                    <a href="" id="buy_sponsor" class="button"><nobr><i class="fa fa-shopping-cart"></i> KUP</nobr></a>
+                </th>
+            </tr>
+            <tr>
+                <td><b>Przedrostek</b></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+            <tr>
+                <td><b>Komenda /home</b></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+            <tr>
+                <td><b>Komenda /craft</b></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+            <tr>
+                <td><b>Komenda /enderchest</b></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+            <tr>
+                <td><b>Dodatkowe złoto</b></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-on"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+            <tr>
+                <td><b>Dodatkowe doświadczenie</b></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-off"></div></td>
+                <td><div class="box-on"></div></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <script src="{{ url_for('static',filename='js/shake.js') }}"></script>
+</body>
+</html>
